@@ -1,10 +1,21 @@
+import React, { useRef } from 'react';
+
 export default function SearchBar(props) {
 
-   console.log(props.onSearch)
+  const inputRef = useRef();
+
+  const event = () => {
+
+    const userID = inputRef.current.value;
+
+    props.onSearch(userID);
+  }
+
+   //console.log(props.onSearch)
   return (
         <div>
-          <input type="search" />
-          <button onClick={props.onSearch}>Agregar</button>
+          <input type="search" ref={inputRef} />
+          <button onClick={event}>Agregar</button>
         </div>
   );
 }

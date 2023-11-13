@@ -9,7 +9,7 @@ export default function Card(props) {
       <h2>{props.species}</h2>
       <h2>{props.gender}</h2>
       <h2>{props.origin.name}</h2>
-      <img src={props.image} alt="image/jpeg" />
+      <img src={props.image} alt={props.name} />
     </div>
   );
 }
