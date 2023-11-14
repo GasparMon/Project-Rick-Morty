@@ -1,0 +1,43 @@
+#div-navbar{
+    position: relative;
+    margin: 0;
+    padding: 0 0 15px 0;
+}
+
+#nav-navbar{
+    position: relative;
+    background: linear-gradient(to bottom, black, rgb(68, 67, 67));
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+#div-Searchnavbar{
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    right: 35px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#search-bar {
+    position: relative;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    margin: 0 5px;
+    right: 20px;
+}
+
+#search-button{
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+}
