@@ -19,8 +19,7 @@ export default function Cards(props) {
           origin={elemento.origin.name}
           image={elemento.image}
           onClose={onClose}
-        
-      
+
         />
       ))}
     </div>
