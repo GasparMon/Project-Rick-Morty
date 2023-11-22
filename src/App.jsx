@@ -9,9 +9,15 @@ import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Undefined from "./components/Undefined/Undefined";
 import Form from "./components/Form/Form";
+import Favorites from "./components/Favorite/Favorites";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFav } from "./redux/actions";
 
 function App() {
+
   const location = useLocation();
+  const dispatch = useDispatch();
+
 
   const [characters, setCharacters] = useState([]);
 
@@ -21,7 +27,14 @@ function App() {
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(
       ({ data }) => {
         if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
+         
+          const existePersonaje = characters.some((character) => character.id === data.id);
+  
+          if (existePersonaje) {
+            window.alert("¡El personaje ya está en la lista!");
+          } else {
+            setCharacters((oldChars) => [...oldChars, data]);
+          }
         } else {
           window.alert("¡No hay personajes con este ID!");
         }
@@ -35,6 +48,8 @@ function App() {
     setCharacters((prevCharacters) =>
       prevCharacters.filter((elemento) => elemento.id !== valor)
     );
+
+    dispatch(removeFav(id))
   }
 
   const navigate = useNavigate();
@@ -52,7 +67,7 @@ function App() {
   }
 
   useEffect(() => {
-   !access && navigate('/');
+  // !access && navigate('/');
 }, [access]);
 
   return (
@@ -60,6 +75,7 @@ function App() {
       {location.pathname !== "/" && <NavBar onSearch={onSearch} />}
       <Routes>
         <Route path="/" element={<Form login={login}/>} />
+        <Route path="/favorites" element={<Favorites onClose={onClose}/>}/>
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}

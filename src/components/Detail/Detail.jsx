@@ -24,7 +24,7 @@ export default function Detail(props) {
       return setCharacter({});
     }, [id]);
 
-    console.log(character)
+    //console.log(character)
 
   return (
     <div id="div-detail">
