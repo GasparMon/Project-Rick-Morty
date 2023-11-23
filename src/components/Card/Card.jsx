@@ -2,10 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addFav, removeFav } from "../../redux/actions";
 import { useEffect, useState } from "react";
+import "./Card.css";
 
 export default function Card(props) {
   const dispatch = useDispatch();
-  const myFavorites = useSelector(state => state.myFavorites);
+  const myFavorites = useSelector((state) => state.allCharacters);
   const onclose = props.onClose;
   const id = props.id;
 
@@ -32,21 +33,36 @@ export default function Card(props) {
   }, [myFavorites]);
 
   return (
-    <div>
-      {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button onClick={handleFavorite}>🤍</button>
-      )}
-      <button onClick={() => onclose(id)}>X</button>
-      <Link to={`/detail/${id}`}>
-        <h2>{props.name}</h2>
+
+    <div id="card-div">
+      <Link to={`/detail/${id}`} id="card-link">
+        <h2 id="card-h2">{props.name}</h2>
       </Link>
-      <h2>{props.status}</h2>
-      <h2>{props.species}</h2>
-      <h2>{props.gender}</h2>
-      <h2>{props.origin}</h2>
+      <h5>ID:{props.id}</h5>
       <img src={props.image} alt={props.name} />
+      <div id="card-button">
+        {isFav ? (
+          <span class="material-symbols-outlined" onClick={handleFavorite}>
+            heart_check
+          </span>
+        ) : (
+          <span class="material-symbols-outlined" onClick={handleFavorite}>
+            heart_plus
+          </span>
+        )}
+        <span class="material-symbols-outlined" onClick={() => onclose(id)}>delete</span>
+      </div>
+      <h3>
+        {props.status} - {props.gender}{" "}
+      </h3>
+
+      <h2>Specie:</h2>
+      <h3>{props.species}</h3>
+      <h2>Origin:</h2>
+      <h3>{props.origin}</h3>
     </div>
+
   );
 }
+
+//<h2>{props.gender}</h2>
