@@ -1,4 +1,5 @@
 import Card from '../Card/Card.jsx'
+import "./Cards.css";
 
 export default function Cards(props) {
 
@@ -6,7 +7,8 @@ export default function Cards(props) {
   let onClose = props.onClose
 
   return (
-    <div>
+    <div id="main-div">
+    <div id="cards-div">
       {personajes.map((elemento, index) => (
         <Card
         
@@ -22,6 +24,7 @@ export default function Cards(props) {
 
         />
       ))}
+    </div>
     </div>
   );
 }

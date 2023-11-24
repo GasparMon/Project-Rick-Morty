@@ -35,11 +35,12 @@ export default function Card(props) {
   return (
 
     <div id="card-div">
+      <div id="card-inner-div">
+      <img src={props.image} alt={props.name} />
       <Link to={`/detail/${id}`} id="card-link">
         <h2 id="card-h2">{props.name}</h2>
       </Link>
-      <h5>ID:{props.id}</h5>
-      <img src={props.image} alt={props.name} />
+      
       <div id="card-button">
         {isFav ? (
           <span class="material-symbols-outlined" onClick={handleFavorite}>
@@ -52,6 +53,8 @@ export default function Card(props) {
         )}
         <span class="material-symbols-outlined" onClick={() => onclose(id)}>delete</span>
       </div>
+      </div>
+      <div id="detail-div">
       <h3>
         {props.status} - {props.gender}{" "}
       </h3>
@@ -60,6 +63,8 @@ export default function Card(props) {
       <h3>{props.species}</h3>
       <h2>Origin:</h2>
       <h3>{props.origin}</h3>
+      <h5>ID:{props.id}</h5>
+      </div>
     </div>
 
   );
