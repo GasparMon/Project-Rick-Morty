@@ -20,7 +20,7 @@ export default function Favorites(props){
     }
 
     return (
-        <div>
+        <div id="fav-div">
             <select onChange={handleOrder}>
             <option value="A">Ascendente</option>
             <option value="D">Descendente</option>
@@ -32,7 +32,7 @@ export default function Favorites(props){
             <option value="Genderless">Genderless</option>
             <option value="unknown">unknown</option>
             </select>
-
+            <div id="cards-div">
           {myFavorites.map((elemento, index) => (
             <Card
             
@@ -48,6 +48,7 @@ export default function Favorites(props){
            
             />
           ))}
+          </div>
         </div>
       );
 }

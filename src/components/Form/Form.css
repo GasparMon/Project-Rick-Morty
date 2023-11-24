@@ -2,7 +2,6 @@
     padding: 0%;
     margin: 0%;
     background-color: rgb(0, 0, 0);
-
     height: 100vh;
 }
 
@@ -23,12 +22,16 @@
     position: absolute;
     width: 500px;
     height: 800px;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 #title-form{
    position: absolute;
     width: 500px;
     left: 180px;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   
 }
 

@@ -43,11 +43,11 @@ export default function Card(props) {
       
       <div id="card-button">
         {isFav ? (
-          <span class="material-symbols-outlined" onClick={handleFavorite}>
+          <span class="material-symbols-outlined" onClick={handleFavorite} style={{ color: "red" }}>
             heart_check
           </span>
         ) : (
-          <span class="material-symbols-outlined" onClick={handleFavorite}>
+          <span class="material-symbols-outlined" onClick={handleFavorite} >
             heart_plus
           </span>
         )}
