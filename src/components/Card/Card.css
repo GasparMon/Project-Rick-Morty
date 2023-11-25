@@ -1,91 +1,80 @@
-
-#card-div{
-    background-color: #0000007e;
-    width: 500px;
-    height: 400px;
-    color: white;
-    text-decoration: none;
-    align-items: center;
-    align-items:center;
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px;
-    transition: transform 0.3s ease;
+#card-div {
+  background-color: #0000007e;
+  width: 500px;
+  height: 425px;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0px 2px 2px 2px rgba(253, 253, 253, 0.034);
+  transition: transform 0.3s ease;
 }
 
 #card-div:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 10px 5px rgba(253, 253, 253, 0.034);
+  transform: scale(1.1);
+  box-shadow: 0px 10px 10px 5px rgba(253, 253, 253, 0.034);
 }
 
-#card-inner-div{
-    position: relative;
-    width: 300px;
-    height: 400px;
+#card-inner-div {
+  position: relative;
+  width: 300px;
+  height: 400px;
 }
 
-#detail-div{
-  
-    height: 400px;
-    width:200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #595c61cd;
-    border-radius: 10px;
-    position: relative;
-    margin-left: 15px;
-    box-shadow: 0px 10px 10px rgba(10, 10, 10, 0.777);
+#detail-div {
+  height: 425px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #595c61cd;
+  border-radius: 10px;
+  position: relative;
+  margin-left: 15px;
+  box-shadow: 0px 10px 10px rgba(10, 10, 10, 0.777);
 }
 
-#card-button{
-    position: relative;
-    bottom: 10px;
-    position:relative;
-    height: 40px;
-
-  
+#card-button {
+  position: relative;
+  bottom: 10px;
+  position: relative;
+  height: 40px;
 }
 
-#card-h2{
-    text-decoration:none;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    
-
+#card-h2 {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-#card-h2:hover{
-    color: rgb(255, 206, 28);
+#card-h2:hover {
+  color: rgb(255, 206, 28);
 }
 
-#card-link{
-    text-decoration: none;
+#card-link {
+  text-decoration: none;
 }
 
-.material-symbols-outlined {
-cursor: pointer;
+.material-symbols-outlined{
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
   font-size: 40px;
   margin-right: 20px;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-.material-symbols-outlined:hover{
-    color: rgb(174, 170, 170);
+.material-symbols-outlined:hover {
+  color: rgb(174, 170, 170);
 }
 
-img{
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 10px rgba(10, 10, 10, 0.777);
- 
+img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(10, 10, 10, 0.777);
 }
-

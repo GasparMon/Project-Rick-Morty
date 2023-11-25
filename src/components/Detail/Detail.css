@@ -1,0 +1,129 @@
+#div-detail{
+
+    color: white;
+    width: 83%;
+    margin: 0 0 0 70px;
+    padding: 0 0 0 100px;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: #00000092;
+    box-shadow: 0px 5px 5px 2px rgba(253, 253, 253, 0.048);
+}
+
+#inner-detail {
+  
+    width: 450px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    margin: auto;
+    border-radius: 20px;
+    background-color: #0c0c0c82;
+}
+
+#inner-detail-text {
+  
+    width: 550px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #0c0c0c82;
+    text-align: justify;
+    padding: 0 0 0 90px;
+}
+
+#detail-img{
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+#live{
+    font-size: 25px;
+    margin: 5px 0 0 15px;
+    padding: 0;
+    text-decoration: none;
+    cursor:default;
+}
+
+#dead{
+    font-size: 25px;
+    margin: 5px 0 0 15px;
+    padding: 0;
+    text-decoration: none;
+    cursor:default;
+}
+
+#unknown{
+    font-size: 25px;
+    margin: 5px 0 0 15px;
+    padding: 0;
+    text-decoration: none;
+    cursor:default;
+}
+
+#Male{
+    font-size: 25px;
+    margin: 5px 0 0 15px;
+    padding: 0;
+    text-decoration: none;
+    cursor:default;
+}
+
+#Female{
+    font-size: 25px;
+    margin: 5px 0 0 15px;
+    padding: 0;
+    text-decoration: none;
+    cursor:default;
+}
+
+#info{
+    font-size: 40px;
+    margin: 5px 0 0 15px;
+    padding: 0;
+    text-decoration: none;
+    cursor:default;
+}
+
+#info:hover{
+    color: white;
+}
+
+#Female:hover{
+    color: white;
+}
+
+#Male:hover{
+    color: white;
+}
+
+#alive:hover{
+    color: white;
+}
+
+#dead:hover{
+    color: white;
+}
+
+#unkown:hover{
+    color: white;
+}
+
+#link{
+    color: white;
+}

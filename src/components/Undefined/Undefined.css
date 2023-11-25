@@ -1,0 +1,22 @@
+#div-undefined{
+  position: absolute;
+  font-size: 30px;
+  font-family: "Comfortaa", sans-serif;
+  font-family: "Onest", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Palanquin", sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+#rick-404{
+    width: 725px;
+    position: relative;
+    right: 300px;
+}
+
+#nd-404{
+    width: 400px;
+    position: relative;
+    bottom: 80px;
+
+}
