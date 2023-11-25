@@ -71,7 +71,7 @@ function App() {
 }, [access]);
 
   return (
-    <div className="App">
+    <div class="App">
       {location.pathname !== "/" && <NavBar onSearch={onSearch} />}
       <Routes>
         <Route path="/" element={<Form login={login}/>} />

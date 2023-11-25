@@ -2,53 +2,124 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from "../Card/Card";
 import { filterCards, orderCards } from "../../redux/actions";
 import { useEffect } from "react";
+import "../Favorite/Favorite.css";
 
-export default function Favorites(props){
+export default function Favorites(props) {
+  const onClose = props.onClose;
+  const dispatch = useDispatch();
+  var myFavorites = useSelector((state) => state.myFavorites);
 
-    const onClose = props.onClose
-    const dispatch = useDispatch();
-    var myFavorites = useSelector(state => state.myFavorites)
+  const handleOrder = (event) => {
+    dispatch(orderCards(event.target.value));
+  };
 
-    const handleOrder = (event) => {
+  const handleFilter = (event) => {
+    dispatch(filterCards(event.target.value));
+  };
 
-        dispatch(orderCards(event.target.value))
-    }
+  return (
+    <div id="fav-div">
+      <div id="fav-select">
+        <div id="fav-title">
+          <h2>Filtros</h2>
+      <span id="fav-span"class="material-symbols-outlined">
+filter_alt
+</span>
+</div>
 
-    const handleFilter = (event) => {
-
-        dispatch(filterCards(event.target.value))
-    }
-
-    return (
-        <div id="fav-div">
-            <select onChange={handleOrder}>
-            <option value="A">Ascendente</option>
-            <option value="D">Descendente</option>
-            </select>
-            <select onChange={handleFilter}>
-            <option value="All">All</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Genderless">Genderless</option>
-            <option value="unknown">unknown</option>
-            </select>
-            <div id="cards-div">
-          {myFavorites.map((elemento, index) => (
-            <Card
-            
-              key={index}
-              id={elemento.id}
-              name={elemento.name}
-              status={elemento.status}
-              species={elemento.species}
-              gender={elemento.gender}
-              origin={elemento.origin.name}
-              image={elemento.image}
-              onClose={onClose}
-           
+        <div class="wrapper_id">
+          <div class="option">
+            <input
+              value="A"
+              name="btn"
+              type="radio"
+              class="input"
+              onClick={handleOrder}
             />
-          ))}
+            <div class="btn">
+              <span class="span">Ascendente</span>
+            </div>{" "}
+          </div>
+          <div class="option">
+            <input
+              value="D"
+              name="btn"
+              type="radio"
+              class="input"
+              onClick={handleOrder}
+            />
+            <div class="btn">
+              <span class="span">Descendente</span>
+            </div>
           </div>
         </div>
-      );
+
+        <div class="wrapper_gender">
+          <div class="option">
+            <input
+              value="All"
+              name="btn"
+              type="radio"
+              class="input"
+              onClick={handleFilter}
+            />
+            <div class="btn">
+              <span class="span">All</span>
+            </div>{" "}
+          </div>
+          <div class="option">
+            <input
+              value="Male"
+              name="btn"
+              type="radio"
+              class="input"
+              onClick={handleFilter}
+            />
+            <div class="btn">
+              <span class="span">Male</span>
+            </div>{" "}
+          </div>
+          <div class="option">
+            <input
+              value="Female"
+              name="btn"
+              type="radio"
+              class="input"
+              onClick={handleFilter}
+            />
+            <div class="btn">
+              <span class="span">Female</span>
+            </div>{" "}
+          </div>
+          <div class="option">
+            <input
+              value="unknown"
+              name="btn"
+              type="radio"
+              class="input"
+              onClick={handleFilter}
+            />
+            <div class="btn">
+              <span class="span">unknown</span>
+            </div>{" "}
+          </div>
+        </div>
+      </div>
+      <div id="cards-div">
+        {myFavorites.map((elemento, index) => (
+          <Card
+            key={index}
+            id={elemento.id}
+            name={elemento.name}
+            status={elemento.status}
+            species={elemento.species}
+            gender={elemento.gender}
+            origin={elemento.origin.name}
+            image={elemento.image}
+            onClose={onClose}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }

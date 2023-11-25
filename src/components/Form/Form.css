@@ -1,70 +1,79 @@
-#div-principal{
-    padding: 0%;
-    margin: 0%;
-    background-color: rgb(0, 0, 0);
-    height: 100vh;
+#div-principal {
+  padding: 0%;
+  margin: 0%;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
 }
 
-#form-div{
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    top: 25vh;
-    left: 25vh;
-    width: 400px;
-    height: 350px;
-    border-radius: 15px;
-    color: white;
+#form-div {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  top: 30vh;
+  left: 25vh;
+  width: 400px;
+  height: 350px;
+  border-radius: 15px;
+  color: white;
+  background-color:  #595c6123;
+  box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.116);
 }
 
-#img-form{
-    position: absolute;
-    width: 500px;
-    height: 800px;
-    background-color: transparent;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+#img-form {
+  position: absolute;
+  width: 500px;
+  height: 800px;
+  background-color: transparent;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
-#title-form{
-   position: absolute;
-    width: 500px;
-    left: 180px;
-    background-color: transparent;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  
+#title-form {
+  position: absolute;
+  width: 500px;
+  left: 180px;
+  background-color: transparent;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  top: 3vh;
 }
 
-.div-label{
-    position: relative;
-    width: 400px;
-    height: 120px;
-    padding-top:10px ;
+.div-label {
+  position: relative;
+  width: 400px;
+  height: 120px;
+  padding-top: 10px;
 }
 
-#boton-form{
-   
-    width: 350px;
-    height: 50px;
-    cursor: pointer;
+#boton-form {
+  width: 350px;
+  height: 50px;
+  cursor: pointer;
 
-    border-radius: 10px;
-    font-size: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 3px solid rgb(255, 255, 255);
+  background: transparent;
+  color: white;
+  transition: 0.3s ease;
+
 }
 
-#input-form{
-    position: relative;
-    width: 350px;
-    height: 50px;
- 
-    border-radius: 10px;
+#boton-form:hover {
+  background-color: white;
+  color: black;
+  border: 3px solid rgb(36, 36, 36);
 }
 
-#label-form{
+#input-form {
+  position: relative;
+  width: 350px;
+  height: 50px;
 
-    position: relative;
-  
-    font-size: 20px;
+  border-radius: 10px;
+}
 
+#label-form {
+  position: relative;
 
+  font-size: 20px;
 }

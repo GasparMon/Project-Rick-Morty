@@ -33,7 +33,10 @@ export default function Detail(props) {
 </h1>
 
     <div id="div-detail">
-   <Link id="link" to="/home"> <span class="material-symbols-outlined">arrow_back_ios_new</span></Link>
+   <Link id="link" to="/home"> <span class="material-symbols-outlined">
+keyboard_return
+</span>
+</Link>
         <div id="inner-detail">
         <img id="detail-img" src={character.image} alt={character.name} />
         <h2>{character.name}</h2>

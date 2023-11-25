@@ -45,17 +45,17 @@ export default function Form(props) {
       <img id="img-form" src="src/img/rick_lading.jpeg" alt="rick_landing"/>
       <div id="form-div">
       <form id="form" onSubmit={handleSubmit}>
-        <div className="div-label">
+        <div class="div-label">
         <label id="label-form">Email: </label>
         <input type="text" id="input-form" name="mail" value={userData.mail} onChange={handleChange} placeholder="Ingresa tu Email"></input>
         <p>{errors.mail ? errors.mail : null}</p>
         </div>
-        <div className="div-label">
+        <div class="div-label">
         <label id="label-form">Password: </label>
         <input type="password" id="input-form" name="password" value={userData.password} onChange={handleChange} placeholder="Ingresa tu Password"></input>
         <p>{errors.password ? errors.password : null}</p>
         </div>
-        <div className="div-label">
+        <div class="div-label">
         <button id="boton-form" disabled={errors.mail || errors.password} type="submit">Enviar</button>
         </div>
       </form>
