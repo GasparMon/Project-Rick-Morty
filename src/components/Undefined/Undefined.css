@@ -31,4 +31,40 @@
   
 }
 
+@media (max-width:950px){
 
+  @keyframes mirageAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(10px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  #div-undefined{
+    position: absolute;
+    font-size: 30px;
+    font-family: "Comfortaa", sans-serif;
+    font-family: "Onest", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Palanquin", sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+  
+  #rick-404{
+      width: 400px;
+      position: relative;
+      right: 300px;
+      display: none;
+  }
+  
+  #nd-404{
+      border: none;
+      width: 400px;
+      position: relative;
+      bottom: 80px;
+      animation: mirageAnimation 1s infinite;
+      display: none;
+  }
+
+}

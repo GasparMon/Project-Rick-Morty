@@ -33,7 +33,7 @@ export default function Detail(props) {
 </h1>
 
     <div id="div-detail">
-   <Link id="link" to="/home"> <span class="material-symbols-outlined">
+   <Link id="link" to="/home"> <span id="detail-span" class="material-symbols-outlined">
 keyboard_return
 </span>
 </Link>

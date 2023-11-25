@@ -22,6 +22,7 @@ export default function NavBar(props) {
   return (
     <div id="div-navbar">
       <nav id="nav-navbar">
+      
         <div id="div-link">
             <Link to="/home">
             <button class="link-button">Home</button>
