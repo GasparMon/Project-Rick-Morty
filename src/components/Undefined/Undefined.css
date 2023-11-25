@@ -1,3 +1,11 @@
+@keyframes mirageAnimation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
 #div-undefined{
   position: absolute;
   font-size: 30px;
@@ -15,8 +23,12 @@
 }
 
 #nd-404{
+    border: none;
     width: 400px;
     position: relative;
     bottom: 80px;
-
+    animation: mirageAnimation 1s infinite;
+  
 }
+
+
