@@ -1,6 +1,28 @@
 #main-div {
     padding: 30px 60px;
   }
+
+  #main-landing{
+    width: 95%;
+    font-family: "Comfortaa", sans-serif;
+    font-family: "Onest", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Palanquin", sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  @keyframes spaceAnimation {
+    0% { transform: skewY(0); }
+    25% { transform: skewY(-.5deg); }
+    50% { transform: skewY(0); }
+    75% { transform: skewY(.5deg); }
+    100% { transform: skewY(0); }
+  }
+
+  #rick-space{
+    width: 500px;
+    animation: spaceAnimation 1s infinite;
+  }
   
   #cards-div {
     display: flex;
