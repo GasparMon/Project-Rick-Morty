@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import {useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import "../Detail/Detail.css"
+import "./Detail.css"
 
 export default function Detail(props) {
     
@@ -13,9 +13,9 @@ export default function Detail(props) {
   
     useEffect(() => {
 
-      axios(
-        `https://rickandmortyapi.com/api/character/${id}`
-      ).then(({ data }) => {
+      //axios(`https://rickandmortyapi.com/api/character/${id}`)
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
+        .then(({ data }) => {
         if (data.name) {
           setCharacter(data);
         } else {

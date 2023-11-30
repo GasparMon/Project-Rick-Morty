@@ -1,5 +1,5 @@
 import React from "react";
-import "../Undefined/Undefined.css"
+import "./Undefined.css"
 
 export default function Undefined(props){
 

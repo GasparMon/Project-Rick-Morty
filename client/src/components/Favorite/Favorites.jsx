@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from "../Card/Card";
 import { filterCards, orderCards } from "../../redux/actions";
 import { useEffect } from "react";
-import "../Favorite/Favorite.css";
+import "./Favorite.css";
 
 export default function Favorites(props) {
   const onClose = props.onClose;
