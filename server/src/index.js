@@ -1,22 +1,27 @@
-const http = require("http");
+const express = require('express');
+const server = express();
+const morgan = require("morgan");
+const router = require('./routes');
 const PORT = 3001;
-const getCharById = require("./controllers/getCharById");
 
-http
-  .createServer((request, response) => {
-    response.setHeader("Access-Control-Allow-Origin", "*");
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header(
+     'Access-Control-Allow-Headers',
+     'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  res.header(
+     'Access-Control-Allow-Methods',
+     'GET, POST, OPTIONS, PUT, DELETE'
+  );
+  next();
+});
 
-    if (request.url.includes( "/rickandmorty/character")) {
-      const id = request.url.split("/").pop();
-      
-      getCharById(response, id)
+server.use(morgan("dev"));
+server.use(express.json());
+server.use("/rickandmorty", router)
 
-    } else {
-      return response
-        .writeHead(404, { "Content-Type": "application/json" })
-        .end(JSON.stringify({ comment: "Endpoint not found" }));
-    }
-  })
-  .listen(PORT, "localhost", () => {
-    console.log(`Server Listening in PORT ${PORT}`);
-  });
+server.listen(PORT, () => {
+   console.log('Server raised in port: ' + PORT);
+});
