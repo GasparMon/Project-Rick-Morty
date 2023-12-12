@@ -1,0 +1,21 @@
+#div_epdetail_char{
+    width: 100px;
+    height: 100px;
+    border: solid 4px rebeccapurple;
+    border-radius: 15px;
+    margin: 1px;
+}
+
+#char_image{
+    width: 100px;
+    height: 100px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgba(253, 253, 253, 0.096);
+  transition: transform 0.3s ease;
+}
+
+#char_image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px 5px rgba(253, 253, 253, 0.034);
+  }
