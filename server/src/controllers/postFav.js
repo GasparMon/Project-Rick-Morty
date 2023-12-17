@@ -4,18 +4,18 @@ const postFav = async (req, res) => {
   try {
     const { name, origin, status, image, species, gender } = req.body;
 
-    if (!name || !origin || !status || !image || !species || !gender) {
-      res.status(401).send("Faltan datos");
-    } else {
-      await Favorite.findOrCreate({
-        where: { name, origin, status, image, species, gender },
-      });
+    if (name && origin && status && image && species && gender) {
 
-      const allFav = await Favorite.findAll();
-      res.status(200).json(allFav);
+      await Favorite.findOrCreate({
+        where: {name, origin, status, image, species, gender}
+      })
+
+      const allFavorites = await Favorite.findAll();
+      return req.status(200).json(allFavorites);
     }
+    return res.status(401).send("Faltan Datos");
   } catch (error) {
-    res.status(500).send(error.message);
+    return res.status(500).send(error.message);
   }
 };
 
