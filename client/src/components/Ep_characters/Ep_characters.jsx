@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../Ep_characters/Ep_characters.modules.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+const url = import.meta.env.VITE_URL_HOST
 
 export default function Ep_characters({ element }) {
   const id = element.replace(/\D/g, "");
@@ -11,7 +12,7 @@ export default function Ep_characters({ element }) {
   useEffect(() => {
 
     axios
-    .get(`http://localhost:3001/rickandmorty/character/${id}`)
+    .get(`${url}/rickandmorty/character/${id}`)
     .then(({ data }) => {
       if (data.name) {
         setImage(data);

@@ -6,7 +6,7 @@ import "./Card.css";
 
 export default function Card(props) {
   const dispatch = useDispatch();
-  const myFavorites = useSelector((state) => state.allCharacters);
+  const myFavorites = useSelector((state) => state.myFavorites);
   const onclose = props.onClose;
   const id = props.id;
 

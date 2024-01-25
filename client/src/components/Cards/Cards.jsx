@@ -9,7 +9,7 @@ export default function Cards(props) {
     if (personajes.length === 0) {
       return (
         <div id="main-landing">
-          <img src="src/img/rick-space.png" alt="rick-space" id="rick-space"></img>
+          <img src="/img/rick-space.png" alt="rick-space" id="rick-space"></img>
           <h1>¡Hola, incauto aventurero interdimensional!</h1>
           <h1>
             Bienvenido a este caótico y genial proyecto basado en Rick and

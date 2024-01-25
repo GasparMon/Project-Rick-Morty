@@ -33,19 +33,22 @@ export default function NavBar(props) {
           <Link to="/favorites">
             <button class="link-button">Favorites</button>
           </Link>
+          <Link to="/allepisodes">
+            <button class="link-button">Episodes</button>
+          </Link>
           <button onClick={handleLogOut} class="link-button">Log Out</button>
         </div>
-        <img id="title-form-nav" src="src/img/name_form.png" alt="rick_morty_title"/>
+        <img id="title-form-nav" src="/img/name_form.png" alt="rick_morty_title"/>
         <div id="div-Searchnavbar">
           <input
             id="search-bar"
             type="search"
-            placeholder="Buscar ID..."
+            placeholder="Search by ID.."
             onChange={HandleValue}
             value={id.valor}
           />
-          <button  onClick={() => onSearch(id.valor)} class="link-button">
-            Agregar
+          <button  onClick={() => onSearch(id.valor) } class="link-button">
+            Add
           </button>
           <button  onClick={() => onSearch(idRandom)} class="link-button">
             Random

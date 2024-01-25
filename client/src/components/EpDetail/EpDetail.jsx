@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../EpDetail/EpDetail.modules.css";
 import Ep_characters from "../Ep_characters/Ep_characters";
+const url = import.meta.env.VITE_URL_HOST
 
 export default function EpDetail(props) {
   const { id } = useParams();
@@ -13,7 +14,7 @@ export default function EpDetail(props) {
   useEffect(() => {
     //axios(`https://rickandmortyapi.com/api/character/${id}`)
     axios
-      .get(`http://localhost:3001/rickandmorty/episodes/${id}`)
+      .get(`${url}/rickandmorty/episodes/${id}`)
       .then(({ data }) => {
         if (data.name) {
           setEpisode(data);

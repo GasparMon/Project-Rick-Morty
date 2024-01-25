@@ -1,8 +1,10 @@
-import { ADD_FAV, FILTER, ORDER, REMOVE_FAV } from "./types";
+import { allEpisodes } from "./actions";
+import { ADD_FAV, ALLEPISODES, FILTER, ORDER, REMOVE_FAV } from "./types";
 
 const initialState = {
   myFavorites: [],
   allCharacters: [],
+  allEpisodes: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -10,8 +12,8 @@ export default function reducer(state = initialState, action) {
     case ADD_FAV:
       return {
         ...state,
-        allCharacters: [...state.allCharacters, action.payload],
-        myFavorites: [...state.allCharacters, action.payload],
+        myFavorites: [...state.myFavorites, action.payload],
+        allCharacters: [...state.allCharacters, action.payload]
       };
 
     case REMOVE_FAV:
@@ -24,6 +26,12 @@ export default function reducer(state = initialState, action) {
         allCharacters: filterCharacters,
         myFavorites: filterCharacters,
       };
+
+      // return {
+      //   ...state,
+      //   myFavorites: action.payload,
+      //   allCharacters: action.payload,
+      // };
 
     case FILTER:
       if (action.payload === "All") {
@@ -53,6 +61,13 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         myFavorites: orderedCopy,
+      };
+
+    case ALLEPISODES:
+      return {
+        ...state,
+        allEpisodes:[],
+        allEpisodes: action.payload,
       };
 
     default:

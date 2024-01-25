@@ -8,6 +8,7 @@ export default function Favorites(props) {
   const onClose = props.onClose;
   const dispatch = useDispatch();
   var myFavorites = useSelector((state) => state.myFavorites);
+  console.log(myFavorites)
 
   const handleOrder = (event) => {
     dispatch(orderCards(event.target.value));
@@ -21,7 +22,7 @@ export default function Favorites(props) {
     <div id="fav-div">
       <div id="fav-select">
         <div id="fav-title">
-          <h2>Filtros</h2>
+          <h2>Filters</h2>
       <span id="fav-span"class="material-symbols-outlined">
 filter_alt
 </span>
@@ -37,7 +38,7 @@ filter_alt
               onClick={handleOrder}
             />
             <div class="btn">
-              <span class="span">Ascendente</span>
+              <span class="span">Ascending</span>
             </div>{" "}
           </div>
           <div class="option">
@@ -49,7 +50,7 @@ filter_alt
               onClick={handleOrder}
             />
             <div class="btn">
-              <span class="span">Descendente</span>
+              <span class="span">Descending</span>
             </div>
           </div>
         </div>

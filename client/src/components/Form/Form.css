@@ -3,15 +3,17 @@
   margin: 0%;
   background-color: rgb(0, 0, 0);
   height: 100vh;
+  min-height: 850px;
 }
 
 #form-div {
   position: relative;
   display: flex;
   align-items: flex-start;
+  justify-content: space-evenly;
   flex-direction: column;
-  top: 30vh;
-  left: 25vh;
+  top: 300px;
+  left: 250px;
   width: 400px;
   height: 350px;
   border-radius: 15px;

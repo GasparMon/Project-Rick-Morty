@@ -6,9 +6,9 @@
     width: 95%;
     font-family: "Comfortaa", sans-serif;
     font-family: "Onest", sans-serif;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Palanquin", sans-serif;
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: "Inconsolata", sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
   }
 
   @keyframes spaceAnimation {
@@ -22,6 +22,7 @@
   #rick-space{
     width: 500px;
     animation: spaceAnimation 1s infinite;
+    box-shadow: none;
   }
   
   #cards-div {
