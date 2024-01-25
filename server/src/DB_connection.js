@@ -1,8 +1,11 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
-const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 const FavoriteModel = require('./models/Favorite');
 const UserModel = require('./models/Users');
+const userBD = process.env.DB_USER;
+const passwordBD = process.env.DB_PASSWORD;
+const hostDB = process.env.DB_HOST;
+const database = process.env.DATABASE;
 
 // EJERCICIO 03
 // A la instancia de Sequelize le falta la URL de conexión. ¡Agrégala!
@@ -11,6 +14,7 @@ const UserModel = require('./models/Users');
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
    `postgres://postgres:root@localhost:5432/rickandmorty`,
+   
    { logging: false, native: false }
 );
 

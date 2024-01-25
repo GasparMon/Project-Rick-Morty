@@ -5,6 +5,7 @@ const router = require('./routes');
 const PORT = 3001;
 const { conn } = require('./DB_connection');
 
+require('./DB_connection')
 
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
