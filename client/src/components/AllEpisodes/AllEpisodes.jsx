@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "../AllEpisodes/Allepisodes.modules.css";
+import "./Allepisodes.modules.css";
 import { useDispatch, useSelector } from "react-redux";
 import { allEpisodes } from "../../redux/actions";
 import Episode from "../Episode/Episode";
